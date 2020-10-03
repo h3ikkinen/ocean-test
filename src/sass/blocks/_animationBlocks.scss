@@ -1,0 +1,77 @@
+// styles for animation 
+.show {
+    display: block;
+}
+.hide {
+    display: none !important;
+}
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+@keyframes fade {
+    from {
+        opacity: 0.1;
+    }
+    to {
+        opacity: 1;
+    }
+}
+//spoiler
+.spoiler {
+    cursor: pointer;
+    position: relative;
+    padding: 10px 20px;
+    &__arrow {
+        margin-left: 3px;
+        svg {
+            transition: .3s all ease;   
+        }
+    }
+    &__body {
+        left: 0;
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding:0px 0px 0px 20px;
+        position: absolute;
+        height: 0;
+        visibility: hidden;
+        opacity: 0;
+        background: $white;
+        transition: .3s all ease;
+        z-index: 40;
+        a {
+            padding: 5px 0;
+            width: 100%;
+            z-index: 30;
+            .spoiler__link {
+                color: $textGrey;
+                transition: .3s all;
+                font-size: 12px;
+                z-index: 50;
+            }
+            &:hover {
+                .spoiler__link {
+                    color: $orange;
+                }
+                text-decoration: none;
+            }
+        }
+    }
+    &.active {
+        background: $white;
+        .spoiler__arrow {
+            svg {
+                transform: rotate(-180deg);
+            }
+        }
+        .spoiler__body {
+            padding:10px 0px 10px 20px;
+            height: auto;
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+}

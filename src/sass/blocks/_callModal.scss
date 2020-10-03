@@ -1,0 +1,315 @@
+.callModal {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s all ease;
+    z-index: 1200;
+    &.active {
+        visibility: visible;
+        opacity: 1;
+
+        .overlay {
+            visibility: visible;
+            opacity: 1;
+            transition: .1s all;
+        }
+        .callModal__body {
+            transform: translateY(0);
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+    .overlay {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        right: 0;
+        background: rgba(0,0,0, .3);
+        visibility: hidden;
+        opacity: 0;
+        transition: .1s all ease;
+        cursor: pointer;
+    }
+    &__body {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        background: $white;
+        z-index: 50;
+        position: relative;
+        width: 80%;
+        max-width: 1305px;
+        height:90%;
+        max-height: 763px;
+        visibility: hidden;
+        opacity: 0;
+        transform: translateY(-10%);
+        height: auto;
+        transition: .3s all ease;
+        padding-bottom: 10%;
+        h1 {
+            margin-top: 7%;
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 300;
+            font-size: 72px;
+            letter-spacing: -0.025em;
+            color: $titleBlack;
+        }
+        p {
+            color: $pBlack;
+            font-size: 16px;
+            max-width: 566px;
+            text-align: center;
+            text-align: center;
+            letter-spacing: 0.035em;
+            margin-top: 10px;
+        }
+        form {
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 70%;
+            max-width: 568px;
+            div {
+                position: relative;
+                width: 100%;
+                height: 74px;
+                margin-bottom: 30px;
+            }
+            input {
+                width: 100%;
+                border: none;
+                border-bottom: 1px solid #9D9D9D; 
+                height: 100%;
+                padding: 0 20px;
+                color: #131313;
+                font-size: 18px;
+                font-weight: 400 ;
+                transition: .3s all ease;
+                &:focus {
+                    outline: none;
+                    border-bottom: 1px solid #131313;
+                }
+            }
+            input:focus ~ label {
+                top: 10%;
+                left: 15px;
+             }
+            label {
+                position: absolute;
+                left: 20px;
+                top: 50%;
+                transform: translateY(-50%);
+                transition: .3s all;
+                font-size: 14px;
+                letter-spacing: 0.035em;
+                color: #585858;
+            }
+            button {
+                width: 100%;
+                height: 70px;
+                background: $orange;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                outline: none;
+                border: none;
+
+                //text
+                margin-top: 10px;
+                color: $white;
+                font-size: 20px;
+                letter-spacing: 0.07em;
+                text-transform: uppercase;
+                transition: .3s all ease;
+                &:hover {
+                    border: solid 1px $orange;
+                    background: rgba(0,0,0,0);
+                    color: $orange;
+                }
+            }
+        }
+        .confid {
+            font-size: 14px;
+            text-align: center;
+            letter-spacing: 0.035em;
+            color: #585858;
+            max-width: 463px;
+            margin-top: 40px;
+            a {
+                color: $orange;
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+    &__close {
+        position: absolute;
+        right: 3%;
+        top: 5%;
+        cursor: pointer;
+    }
+}
+@media (max-width: 800px) {
+    .callModal__body {
+        max-height: 100vh;
+        padding-bottom: 0;
+        h1 {
+            font-size: 56px;
+            margin-top: 50px;
+        }
+        p {
+            font-size: 14px;
+            width: 60%;
+        }
+        form {
+            margin-top: 10px;
+        }
+        .confid {
+            width: 80%;
+            font-size: 14px;
+        }
+    }
+
+}
+@media (max-width: 501px) {
+    .callModal__body {
+        max-height: 100vh;
+        padding-bottom: 30px;
+        h1 {
+            font-size: 46px;
+            margin-top: 60px;
+        }
+        p {
+            font-size: 14px;
+            width: 85%;
+        }
+        form {
+            width: 90%;
+            margin-top: 10px;
+            button {
+                margin-top: 0px;
+                height: 60px;
+            }
+        }
+        .confid {
+            font-size: 14px;
+            width: 85%;
+        }
+    }
+    .callModal__close {
+        right: 20px;
+        top: 15px;
+    }
+
+}
+@media (max-width: 401px) {
+    .callModal__body {
+        max-height: 100vh;
+        height: auto;
+        width: 90%;
+        h1 {
+            font-size: 36px;
+            margin-top: 30px;
+        }
+        p {
+            font-size: 12px;
+            width: 85%;
+            margin-top: 10px;
+        }
+        form {
+            width: 90%;
+            margin-top: 10px;
+            button {
+                margin-top: 10px;
+                height: 50px;
+            }
+        }
+        .confid {
+            font-size: 12px;
+            width: 85%;
+            margin: 35px 0 15px 0;
+        }
+    }
+    .callModal__close {
+        right: 20px;
+        top: 15px;
+    }
+
+}
+@media (max-width: 350px) {
+    .callModal__body {
+        max-height: 100vh;
+        height: 555px;
+        width: 100%;
+        h1 {
+            font-size: 36px;
+            margin-top: 30px;
+        }
+        p {
+            font-size: 12px;
+            width: 85%;
+            margin-top: 10px;
+        }
+        form {
+            width: 90%;
+            margin-top: 10px;
+            button {
+                margin-top: 10px;
+                height: 50px;
+            }
+        }
+        .confid {
+            font-size: 12px;
+            width: 85%;
+            margin: 35px 0 15px 0;
+        }
+    }
+    .callModal__close {
+        right: 20px;
+        top: 15px;
+    }
+
+}
+@media (max-height: 750px) {
+    .callModal__body {
+        max-height: 100vh;
+        height: 555px;
+        h1 {
+            font-size: 36px;
+            margin-top: 30px;
+        }
+        p {
+            font-size: 12px;
+            width: 85%;
+            margin-top: 10px;
+        }
+        form {
+            width: 90%;
+            margin-top: 10px;
+            button {
+                margin-top: 10px;
+                height: 50px;
+            }
+        }
+        .confid {
+            font-size: 12px;
+            width: 85%;
+            margin: 35px 0 15px 0;
+        }
+    }
+    .callModal__close {
+        right: 20px;
+        top: 15px;
+    }
+
+}

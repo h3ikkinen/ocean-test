@@ -1,0 +1,53 @@
+@import 'libs/bootstrap-reboot.min';
+@import 'base/variables';
+@font-face{
+
+    font-family: 'Averta';
+    
+    src: url('../fonts/Averta/AvertaRegular.otf');
+    
+    font-weight: normal;
+    
+    font-style: normal;
+    
+}
+// @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&display=swap');
+* {
+    font-family: 'AvertaNormal', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+//import blocks 
+@import 'blocks/header';
+@import 'blocks/animationBlocks';
+@import 'blocks/callModal';
+
+//main styles 
+a {
+    &:hover {
+        text-decoration: none;
+    }
+}
+.container {
+    width: 1600px;
+    margin: 0 auto;
+}
+@media (max-width: 1600px) {
+    .container {
+        width: 1400px;
+        margin: 0 auto;
+    }
+}
+@media (max-width: 1400px) {
+    .container {
+        width: 1140px;
+        margin: 0 auto;
+    }
+}
+@media (max-width: 1160px) {
+    .container {
+        width: 95%;
+        margin: 0 auto;
+    }
+}
