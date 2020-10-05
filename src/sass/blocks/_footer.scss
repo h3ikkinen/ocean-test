@@ -128,6 +128,7 @@
     }
 }
 .post_footer {
+    padding: 1rem 0;
   .container {
       display: flex;
       justify-content: space-between;
@@ -376,7 +377,7 @@
                 padding: 0.5rem 0;
                 p {
                   font-size: 12px;
-                  
+                  text-align: center;
                   letter-spacing: 0.035em;
                   
                   color: #A0A0A0;
@@ -386,7 +387,7 @@
                   font-size: 12px;
                   margin-top: 0.5rem;
                   letter-spacing: 0.035em;
-                  
+                  text-align: center;
                   color: #A0A0A0;
                   transition: .3s all ease;
                   &:hover {
