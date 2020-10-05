@@ -1,0 +1,40 @@
+.lefta {
+    visibility: hidden;
+    transform: translateX(-50px);
+    opacity: 0;
+    &._active {
+        visibility: visible;
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+.downa {
+    visibility: hidden;
+    transform: translateY(-50px);
+    opacity: 0;
+    &._active {
+        visibility: visible;
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+.topa {
+    visibility: hidden;
+    transform: translateY(50px);
+    opacity: 0;
+    &._active {
+        visibility: visible;
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+.righta {
+    visibility: hidden;
+    transform: translateX(50px);
+    opacity: 0;
+    &._active {
+        visibility: visible;
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}

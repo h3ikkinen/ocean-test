@@ -1,0 +1,124 @@
+.intro {
+    height: 405px;
+    width: 100%;
+    &__wrapper {
+        position: relative;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        img {
+            height: 100%;
+            width: 100%;
+            z-index: 1;
+            object-fit: cover;
+        }
+        .bg_container {
+            position: absolute;
+            z-index: 2;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background: linear-gradient(117.21deg, rgba(0, 0, 0, 0.71) 33.02%, rgba(0, 0, 0, 0) 120.71%);
+
+        }
+    }
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        z-index: 30;
+        left: 0;
+        div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+        h1 {
+            font-family: 'Cormorant Garamond';
+            font-size: 72px;
+            text-align: center;
+            letter-spacing: -0.025em;
+            font-weight: normal;
+            color: #FFFFFF;
+            transition: .3s all ease;
+            transition-delay: .4s;
+        }
+        p {
+            font-size: 16px;
+            line-height: 140%;
+            text-align: center;
+            letter-spacing: 0.035em;
+            max-width: 600px;
+            width: 90%;
+            color: #FFFFFF;
+            margin-top: 30px;
+            transition: .5s all ease;
+            transition-delay: .6s;
+        }
+    }
+}
+.mobImg {
+    display: none;
+}
+.tabImg {
+    display: none;
+}
+@media (max-width: 1280px) {
+    .intro {
+        height: 301px;
+        &__container {
+            p {
+                margin-top: 0;
+            }
+        }
+    }
+}
+@media (max-width: 768px) {
+    .desctImg {
+        display: none;
+    }
+    .tabImg {
+        display: block;
+    }
+    .intro {
+        height: 301px;
+        &__container {
+            p {
+                font-size: 14px;
+                margin-top: 0;
+            }
+        }
+    }
+}
+@media (max-width: 450px) {
+    .desctImg {
+        display: none;
+    }
+    .tabImg {
+        display: none;
+    }
+    .mobImg {
+        display: block;
+    }
+    .intro {
+        height: 290px;
+        &__container {
+            
+            h1 {
+                font-size: 36px;
+            }
+            p {
+                margin-top: 0;
+                width: 304px;
+            }
+        }
+    }
+}

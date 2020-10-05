@@ -1,0 +1,346 @@
+.kitchen {
+    width: 100%;
+    &__desktop {
+        display: flex;
+        flex-direction: column;
+    }
+    .kithcen__mobile {
+        display: none !important;
+    }
+    &__img {
+        position: relative;
+        height: 902px;
+        max-height: 902px;
+        height: 100vh;
+        min-height: 672px;
+        width: 100%;
+        background: #fafafa;
+        transition: .6s all ease;
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: auto;
+            width: 100%;
+            height: 100%;
+            max-height: 902px;
+            object-fit: cover;
+        }
+    }
+    .kitchen-descr {
+        position: absolute;
+        top: 50px;
+        left: 10%;
+        background: rgba(255, 255, 255, 0.85);
+        width: 503px;
+        height: 161px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 3%;
+        transition: .5s all ease;
+        transition-delay: .5s;
+        .date {
+            font-size: 16px;
+            letter-spacing: 0.105em;
+            text-transform: uppercase;
+
+            color: #4F4F4F;
+            margin-bottom: 5px;
+        }
+        .descr {
+            font-size: 25px;
+            line-height: 31px;
+
+            color: #141414;
+        }
+    }
+    .kitchen__down {
+        min-height: 350px;
+        display: flex;
+        align-items: center;
+        position: relative;
+        .txt {
+            width: 600px;
+            display: flex;
+            position: relative;
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+            padding: 30px 50px;
+            margin-left: 15%;
+            transition: .7s all ease;
+            transition-delay: 1s;
+            p {
+                width: 90%;
+                font-size: 16px;
+
+                letter-spacing: 0.035em;
+                color: #494949;
+            }
+        }
+        .left_arrow {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+        .right_arrow {
+            position: absolute;
+            bottom: 30px;
+            right: 50px;
+        }
+        .portret {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            align-items: flex-end;
+            transition: .5s all ease;
+            transition-delay: .7s;
+            img {
+                max-width: 655px;
+                max-height: 573px;
+            }
+            .name {
+                margin-right: 2rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                transition: .5s all ease;
+                transition-delay: 1s;
+                h5 {
+                    font-size: 20px;
+                    line-height: 25px;
+                    /* identical to box height */
+                    
+                    letter-spacing: 0.07em;
+                    text-transform: uppercase;
+                    
+                    color: #000000;
+                }
+                p {
+                    font-size: 16px;
+                    line-height: 118.49%;
+                    /* identical to box height, or 19px */
+
+                    letter-spacing: 0.035em;
+
+                    color: #A0A0A0;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 1400px) { 
+    .portret {
+        flex-direction: column;
+        position: absolute;
+        right: 0;
+        bottom: 30px;
+        display: flex;
+        align-items: center !important;
+        transition: .5s all ease;
+        transition-delay: .7s;
+        img {
+            max-width: 396px !important;
+            max-height: 413px !important;
+        }
+        .name {
+            order: 1;
+            margin-top: 30px !important;
+        }
+    }
+}
+@media (max-width: 1400px) { 
+    .kitchen {
+        overflow-x: hidden;
+        .kitchen__down {
+            height: 300px;
+            max-height: 300px;
+            .txt {
+                margin-left: 10%;
+            }
+        }
+        .portret {
+            flex-direction: column;
+            position: absolute;
+            right: 0;
+            bottom: 30px;
+            display: flex;
+            align-items: center !important;
+            transition: .5s all ease;
+            transition-delay: .7s;
+            img {
+                max-width: 396px !important;
+                max-height: 413px !important;
+            }
+            .name {
+                order: 1;
+                margin-top: 30px !important;
+            }
+        }
+    }
+
+}
+
+@media (max-width: 1100px) { 
+    .kitchen {
+        .kitchen__down {
+            height: 300px;
+            max-height: 300px;
+            .txt {
+                margin-left: 30px;
+            }
+        }
+    }
+}
+@media (max-width: 1000px) { 
+    .kitchen {
+        .kitchen__down {
+            height: 300px;
+            max-height: 300px;
+            .txt {
+                margin-left: 5px;
+                width: 500px;
+            }
+        }
+    }
+}
+@media (max-width: 1000px) { 
+    .kitchen {
+        .kitchen__down {
+            height: 300px;
+            max-height: 300px;
+            .txt {
+                margin-left: 5px;
+                width: 400px;
+            }
+        }
+    }
+}
+@media (max-width: 768px) { 
+    .kitchen {
+        .kitchen__down {
+            height: 300px;
+            max-height: 300px;
+            .txt {
+                margin-left: 0px;
+                width: 50%;
+            }
+            img {
+                max-width: 396px;
+                max-height: 413px;
+            }
+        }
+    }
+}
+@media (max-width: 700px) { 
+    .kitchen {
+        .kitchen__desktop {
+            display: none;
+        }
+        .kithcen__mobile {
+            display: flex !important;
+            width: 100%;
+            flex-direction: column;
+            align-items: center;
+            &-descr {
+                height: 125px;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                align-items: flex-start;
+                padding-left: 25px;
+                width: 100vw;
+                .date {
+                    font-size: 12px;
+                    width: 100%;
+                    letter-spacing: 0.105em;
+                    text-transform: uppercase;
+                    width: 100%;
+                    color: #4F4F4F;
+                }
+                .descr {
+                    width: 100%;
+                    margin-top: 5px;
+                    font-size: 16px;
+                    color: #141414;
+                }
+            }
+
+        }
+    }
+    .do700 {
+        width: 100%;
+        max-height: 70vh;
+        min-height: 60vh;
+        height: auto;
+        object-fit: cover;
+        transition: .5s all ease;
+    }
+    .do400 {
+        display: none ;
+    }
+    .do700_grl {
+        width: 100%;
+        height: auto;
+        max-height: 50vh;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        transition: .5s all ease;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+    .name {
+        transition: .3s all ease;
+        width: 100%;
+        padding-left: 25px;
+        h5 {
+            margin-top: 20px;
+            font-size: 16px;
+            /* identical to box height */
+            
+            letter-spacing: 0.07em;
+            text-transform: uppercase;
+            
+            color: #000000;
+        }
+        p {
+            font-size: 14px;
+            /* identical to box height, or 17px */
+            
+            letter-spacing: 0.035em;
+            
+            color: #A0A0A0;
+        }
+    }
+    .txt {
+        display: flex;
+        position: relative;
+        width: 100%;
+        height: 150px;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 5%;
+        margin-bottom: 5%;
+        padding-top: 10%;
+        .left_arrow {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        p {
+            width: 80%;
+            text-align: center;
+        }
+        .right_arrow {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+    }
+}

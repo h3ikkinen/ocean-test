@@ -1,0 +1,318 @@
+.projects {
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+    overflow: hidden;
+    background: $white;
+    h1 {
+        font-family: "Cormorant Garamond";
+
+        font-weight: 300;
+        font-size: 72px;
+        line-height: 117.3%;
+        /* or 84px */
+
+        letter-spacing: -0.025em;
+
+        color: #141414;
+        transition: .6s all ease;
+        transition-delay: .3s;
+    }
+    .swiper__mobile {
+        display: none;
+        flex-direction: column;
+        height: 100%;
+        justify-content: center;
+        width: auto;
+        &-descr {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.85);
+            height: 125px;
+            padding-left: 30px;
+            .date {
+                font-size: 12px;
+
+                letter-spacing: 0.105em;
+                text-transform: uppercase;
+
+                color: #4F4F4F;
+            }
+            .descr {
+                font-size: 16px;
+                line-height: 20px;
+
+                color: #141414;
+            }
+        }
+        img {
+            object-fit: cover;
+        }
+    }
+    &__slider {
+        max-height: 920px;
+        min-height: 560px;
+        height: 80vh;
+        overflow: visible !important;
+        margin-top: 1.5rem !important;
+        transition: .6s all ease;
+        transition-delay: .6s;
+    }
+    &_slide {
+        position: relative;
+        height: auto;
+        max-height: 920px;
+        height: 100%;
+        max-width: 100%;
+        width: 100%;
+
+        // transition: .1s all ease;
+        .slider_img-wrapper {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                transition: .2s all ease;
+            }
+        }
+        .slider-descr {
+            position: absolute;
+            top: 40px;
+            left: 65px;
+            z-index: 30;
+            padding: 10px;
+            width: 503px;
+            min-height: 161px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.85);
+            .date {
+                width: 90%;
+                font-size: 16px;
+                letter-spacing: 0.105em;
+                text-transform: uppercase;
+                color: #4F4F4F;
+            }
+            .descr {
+                width: 90%;
+                font-weight: normal;
+                font-size: 25px;
+                line-height: 31px;
+
+                color: #141414;
+            }
+        }
+        
+    }
+    .slider__bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 3rem;
+        .slider__btn {
+            transition: .3s all ease;
+            transition-delay: .5s;
+            div {
+                width: 306px;
+                height: 70px; 
+                display: flex;
+                justify-content: center;
+                align-items: center;  
+                border: 1px solid #323232;
+                font-size: 20px;
+                letter-spacing: 0.105em;
+                text-transform: uppercase;
+
+                color: #131313;
+                transition: .3s all ease;
+                &:hover {
+                    color: $orange;
+                    border: 1px solid $orange;
+                }
+
+            }
+
+        }
+        .nav_slider {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 170px;
+            .prev-btn_projects {
+                width: 70px;
+                height: 70px;
+                border-radius: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                transition: .3s all ease;
+                // transition-delay: .5s;
+                &:focus {
+                    outline: none;
+                }
+            }
+            .next-btn_projects {
+                width: 70px;
+                height: 70px;
+                border-radius: 100%;
+                background: $orange;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                transition: .3s all ease;
+                // transition-delay: .5s;
+                svg {
+                    transition: .3s all ease;
+                }
+                &:focus {
+                    outline: none;
+                }
+                &:hover {
+                    border:1px solid $orange;
+                    background: rgba(0,0,0,0);
+                    svg {
+                        path {
+                            stroke: $orange;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+}
+.swiper-slide-prev {
+    .slider_img-wrapper {
+        img {
+            visibility: hidden;
+            opacity: 0;
+        }
+    }
+}
+@media (max-width: 1280px ) {
+    .projects {
+        padding-top: 2rem;
+        h1 {
+            font-size: 64px;
+
+        }
+    }
+}
+@media (max-width: 1140px ) {
+    .projects {
+        padding-top: 2rem;
+        h1 {
+            font-size: 55px;
+
+        }
+    }
+}
+@media (max-width: 700px ) {
+    .projects {
+        overflow: hidden;
+        background: #fafafa;
+        &__slider {
+            overflow-x: hidden !important;
+        }
+        
+        &_slide {
+            
+            .slider-descr {
+                top: 0 !important;
+                left: -0.4px !important;
+            }
+        }
+    }
+
+}
+@media (max-width: 550px ) {
+    .projects {
+        padding-top: 2rem;
+        overflow: hidden !important;
+        .swiper__desktop {
+            display: none;
+        }
+        .swiper__mobile {
+            display: flex;
+        }
+        h1 {
+            font-size: 36px;
+            margin-bottom: 30px;
+            margin-top: 10px;
+        }
+        .projects__slider {
+            overflow: hidden !important;
+            overflow: hidden;
+        }
+        .slider__bottom {
+            margin-top: 20px;
+            .nav_slider {
+                width: 100%;
+                .prev-btn_projects {
+                    width: 54.57px;
+                    height: 54.57px;
+                    border-radius: 100%;
+                    background: $orange;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    cursor: pointer;
+                    transition: .3s all ease;
+                    svg {
+                        path {
+                            stroke: $white;
+                        }
+                    }
+                    &:hover {
+                        border: none;
+                        background: $orange;
+                        svg {
+                            path {
+                                stroke: $white;
+                            }
+                        }
+                    }
+                }
+                .next-btn_projects {
+                    width: 54.57px;
+                    height: 54.57px;
+                    border-radius: 100%;
+                    background: $orange;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    cursor: pointer;
+                    transition: .3s all ease;
+                    svg {
+                        path {
+                            stroke: $white;
+                        }
+                    }
+                    &:hover {
+                        border: none;
+                        background: $orange;
+                        svg {
+                            path {
+                                stroke: $white;
+                            }
+                        }
+                    }
+                }
+            }
+            
+        }
+        .slider__btn {
+            display: none;
+        }
+    }
+}
