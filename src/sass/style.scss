@@ -57,13 +57,13 @@ a {
         display: flex;
         align-items: end;
         .arrow {
-            margin-top: 3px;
+            line-height: 22px;
         }
         &_item {
             font-size: 14px;
             color: #131313;
             transition: .3s all ease;
-            margin: 4px 5px;
+            margin:0 5px 0 5px;
             &:hover {
                 color: $orange;
             }
